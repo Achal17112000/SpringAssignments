@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <context:component-scan base-package="bean"/>
+
+    <bean id="vehicle" class="bean.Vehicle">
+        <property name="vehicle_number" value="MH15CD5138"/>
+        <property name="color" value="Gray"/>
+        <property name="owner_name" value="Achal" />
+    </bean>
+
+    <bean id="dog" class="bean.Dog" />
+    <bean id="cat" class="bean.Cat" />
+    <bean id="color" class="bean.Color" />
+
+    <bean id="vehicle1" class="bean.Vehicle">
+        <property name="vehicle_number" value="MH15HQ3407"/>
+        <property name="color" value="Black"/>
+        <property name="owner_name" value="Darshan" />
+    </bean>
+
+    <bean id="car" class="bean.Car">
+        <property name="company" value="TATA" />
+        <property name="model" value="xz+" />
+        <property name="vehicleList">
+            <list>
+                <ref bean="vehicle"/>
+                <ref bean="vehicle1" />
+            </list>
+        </property>
+    </bean>
+</beans>
