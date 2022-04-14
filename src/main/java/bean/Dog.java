@@ -38,12 +38,12 @@ public class Dog {
         this.breedName = breedName;
     }
 
-    @PostConstruct
-    public void init() {
-        if(color != null) {
-            color.setTextureColor("Black");
-            color.setBaseColor("White");
-        }
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 
     public void show() {

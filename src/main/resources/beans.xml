@@ -18,10 +18,6 @@
         <property name="owner_name" value="Achal" />
     </bean>
 
-    <bean id="dog" class="bean.Dog" />
-    <bean id="cat" class="bean.Cat" />
-    <bean id="color" class="bean.Color" />
-
     <bean id="vehicle1" class="bean.Vehicle">
         <property name="vehicle_number" value="MH15HQ3407"/>
         <property name="color" value="Black"/>

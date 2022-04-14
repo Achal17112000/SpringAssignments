@@ -9,17 +9,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DogCatConfiguration {
 
-//    @Bean
-//    public Dog getDogDetail() {
-//        Dog d1 = new Dog();
-//        d1.setDogName("Kalu");
-//        d1.setOwnerName("Raju");
-//        d1.setBreedName("tiger");
-//        d1.getColor().setBaseColor("Brown");
-//        d1.getColor().setTextureColor("Golden");
-//        return d1;
-//    }
-
+    @Bean
+    public Color getColor() { return new Color(); }
     @Bean
     public Cat getCatDetail() {
         return new Cat();

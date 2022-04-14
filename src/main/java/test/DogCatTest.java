@@ -1,6 +1,7 @@
 package test;
 
 import bean.Cat;
+import bean.Color;
 import bean.Dog;
 import config.DogCatConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -14,12 +15,23 @@ public class DogCatTest {
         context.refresh();
 
         Dog d1 = context.getBean(Dog.class);
-//        d1.show();
+        Color color = context.getBean(Color.class);
+        color.setBaseColor("Black");
+        color.setTextureColor("Brown");
+        d1.setDogName("Rubby");
+        d1.setOwnerName("Rony");
+        d1.setBreedName("Wild");
+        d1.setColor(color);
+        d1.show();
 
         Cat c1 = context.getBean(Cat.class);
+        Color color1 = context.getBean(Color.class);
+        color1.setBaseColor("White");
+        color1.setTextureColor("Black");
         c1.setCatName("Lilly");
-        c1.setBreedName("fadf");
-        c1.setOwnerName("fefwef");
+        c1.setBreedName("Wild");
+        c1.setOwnerName("Rahul");
+        c1.setColor(color);
         c1.show();
 
 

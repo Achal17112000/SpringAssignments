@@ -38,12 +38,12 @@ public class Cat {
         this.breedName = breedName;
     }
 
-    @PostConstruct
-    public void init() {
-        if(color != null) {
-            color.setTextureColor("Brown");
-            color.setBaseColor("White");
-        }
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 
     public void show() {
